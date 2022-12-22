@@ -47,6 +47,6 @@ class Predictor(DefaultPredictor):
             x_in = np.array([1.0, np.log(age), np.log(areas.numpy().mean())])
             theta = np.array(self.cfg.WEIGHT.THETA, dtype=x_in.dtype)
             y = theta.T @ x_in
-            predictions["weight"] = np.exp(y).item()
+            predictions["weight"] = np.exp(y).item() + 0.145
 
             return predictions
