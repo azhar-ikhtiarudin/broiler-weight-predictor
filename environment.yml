@@ -1,0 +1,24 @@
+name: broilercv
+channels:
+  - pytorch
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - scikit-learn
+  - pytorch=1.10
+  - torchvision=0.11
+  - pywin32
+  - pip
+
+  # Adjust with your own CUDA Toolkit version
+  # PyTorch only supports the following versions: 10.2, 11.3, 11.6
+  - cudatoolkit=11.3
+  # No CUDA. Only use CPU
+  # - cpuonly
+  - pip:
+      - opencv-python
+      - labelme
+      - pycocotools
+      - git+https://github.com/salehzaidan/detectron2
+      - pytest
